@@ -9,7 +9,7 @@ export default function SearchBar({ onSearch }) {
   useEffect(() => {
     const loadActiveAccounts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/accounts/active');
+        const response = await fetch('https://zeru-defi-detective-server.vercel.app/api/accounts/active');
         const data = await response.json();
         setSuggestions(data.accounts);
       } catch (error) {
